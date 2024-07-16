@@ -98,12 +98,17 @@ function calculateCartPrice(...num1){
     return num1 
 }
 console.log(calculateCartPrice(200,300,100));   
-*/
+
+console.log(addOne(5)); 
 function addOne(num){
 return num + 1 ;
 }
-console.log(addOne(5)); 
+console.log(addTwo(5)) ;
 const addTwo =  function(num){
     return num + 2 ;
 }
 console.log(addTwo(5)) ;
+            ^
+
+//ReferenceError: Cannot access 'addTwo' before initialization   
+*/
