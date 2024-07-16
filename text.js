@@ -140,4 +140,17 @@ function chai(){
 }
 chai() ;
 // as it printing undefind for above as this can only  be used in objects not in functions 
+
+const chai = () => {
+    let username = "hitesh" ;
+    console.log(this.username);
+}
+chai() ;
+const chaii = function(){
+    let username = "hitesh" ;
+    console.log(this.username);
+}
+
+chaii() ;
+
 */
