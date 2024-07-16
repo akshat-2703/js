@@ -1,7 +1,8 @@
+/*
 const hero = ["akshat","deepak"] 
 const her = ["name","ndm"] 
 //hero.push(her)
- /*const kd = [...hero,...her] //spread operartor
+ const kd = [...hero,...her] //spread operartor
 console.log(kd);
 const jd = [1,2,3,[3,9,[2,3]],[3,4,[3,2]]] 
 const real = jd.flat(Infinity) ;
@@ -111,4 +112,32 @@ console.log(addTwo(5)) ;
             ^
 
 //ReferenceError: Cannot access 'addTwo' before initialization   
+
+const user = {
+    username  : "akshat",
+    price : 999 ,
+    welcomeMessage : function(){
+      console.log(`${this.username},welcome to website`);
+       console.log(this);
+    }
+}
+//user.welcomeMessage() ;
+
+//user.username = "same" ;
+//user.welcomeMessage() ;
+
+//console.log(this);
+//js previous as only method in browsser only jo engine h wo actual m paya jata h broser k andr ab us engine ko nikala node,dino,bun etc standalone hai but browser k andr jo global object h wo windows  object hai 
+function chai(){
+    console.log(this);
+    // as it printing many things regarding this 
+}
+chai()
+
+function chai(){
+    let username = "hitesh" ;
+    console.log(this.username);
+}
+chai() ;
+// as it printing undefind for above as this can only  be used in objects not in functions 
 */
