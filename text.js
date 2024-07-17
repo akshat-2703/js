@@ -153,4 +153,61 @@ const chaii = function(){
 
 chaii() ;
 
+   
+const addTwo = (n1,n2) => {
+    return n1 +n2 ;
+}
+    
+const addTwo = (n1,n2) =>  n1+n2 ;
+
+const addTwo = (n1,n2) => (n1+n2) ;
+console.log(addTwo(4,3)) ;
+
+//IIFE =this is basically jo func imm3eediately executed ho jaay
+//THE MAIN DEF FOR IIFE = GLOBAL SCOPE KE POLLUTION SE PROBLEM HOTI HAI KAI BAAR,US GLOBAL SCOPE KE POPULATION KO HATANE KE LIE USE KIA HAI 
+
+(function chai(){
+    console.log(`DB CONNECTED`);
+})() ;
+((name) =>  {
+    console.log(`DB CONNECTED TWO ${name}`);
+})('hitesh')
+
+Javascript Execution Context = 
+Global EC ;
+-Global EC 
+-Function EC
+-eval EC 
+{} -> Memory Creation Phase only memory allocate 
+ - Execution Phase 
+-Global Ec = > this 
+-memory phase memory allocate val1 - undefined ,val2 = undefined 
+
+const month = 3 ;
+switch (month) {
+    case 1:
+        console.log("january");
+        break;
+    case 2:
+        console.log("feb");
+        break;
+    case 3:
+        console.log("mar");
+        break;
+    case 3:
+        console.log("mar");
+       break;
+//if break will comment out then all the cases output print except default ;
+    default:
+        console.log("m");
+        break;
+}
+//falsy values
+false,0,-0,BigInt 0n,"",null,undefined,NaN except this all are truthy 
+//truthy values 
+"0",'false'," ",[],{},function(){} 
 */
+const emptyObj = {} ;
+if(Object.keys(emptyObj).length === 0){
+    console.log("Object is empty");
+}
