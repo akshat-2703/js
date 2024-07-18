@@ -206,8 +206,68 @@ switch (month) {
 false,0,-0,BigInt 0n,"",null,undefined,NaN except this all are truthy 
 //truthy values 
 "0",'false'," ",[],{},function(){} 
-*/
+
 const emptyObj = {} ;
 if(Object.keys(emptyObj).length === 0){
     console.log("Object is empty");
 }
+    
+//Nullish Coalescing Operator (??) : null undefined
+ //for of 
+ //["","",""]
+ //[{},{},{}]
+ const arr = [1,2,3,4,5] 
+ for(const val of arr){
+ // console.log(val);
+ }
+ const greeting = "hello world" 
+ for(const greet of greeting){ 
+   // console.log(`Each char is ${greet}`) ;
+ }
+ //map 
+ 
+ const map = new Map() ;
+ map.set('IN','India') ;
+map.set('USA','United State of America') ;
+for(const [key,value] of map){
+ console.log(key,':-',value) ;
+}
+ 
+const myObject = {
+    'game1' : 'NFS',
+    'game2' : 'spiderman' 
+}
+for(const [key,value] of myObject){
+    console.log(key,':-',value);
+}
+//not possible
+const coding = ["js","ruby","java","cpp"] 
+coding.forEach(function (val){
+    console.log(val);
+})
+coding.forEach((val1)=>{
+  console.log(val1);
+})
+  
+ const coding = {
+    {
+        lang: "javascript",
+        langFile : "java"
+    },
+    {
+        lang: "javasc",
+        langFile : "java"
+    },
+    {
+        lang: "javascript",
+        langFile : "java"
+    },
+ }
+*/
+const myNum = [21,2,33,1,3] ;
+//const ne = myNum.filter((num) => num>4) ;
+//console.log(ne);
+const ne = myNum.filter((num) => {
+   return num > 4 ;
+}) ;
+console.log(ne);
