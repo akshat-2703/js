@@ -34,13 +34,15 @@ console.log(mini);
 //More precise 
 const array = [1,2,3,4,5] ;
 console.log(Math.max(...array));
-*/
+
 const str = "racecar" ;
 let n = str.length ;
 let i = 0 , j = n-1 ;
 while(i <= j){
     if(str[i++] != str[j--]){
         console.log("false");
+        break ;
     }
 }
 console.log("true");
+*/

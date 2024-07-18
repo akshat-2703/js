@@ -263,7 +263,7 @@ coding.forEach((val1)=>{
         langFile : "java"
     },
  }
-*/
+
 const myNum = [21,2,33,1,3] ;
 //const ne = myNum.filter((num) => num>4) ;
 //console.log(ne);
@@ -271,3 +271,38 @@ const ne = myNum.filter((num) => {
    return num > 4 ;
 }) ;
 console.log(ne);
+
+const myNum = [1,2,3,5,6,7] 
+// const newn = myNum.map((num)=>num+10) ;
+const newNums = myNum.map((num)=> num*10).map((num)=>num+1).filter((num) => num >= 40) ;
+console.log(newNums);
+
+const arr = [1,2,3,4,5] ;
+
+const nume = arr.reduce(function(acc,currval){
+    return acc*currval
+},4)
+
+console.log(nume);
+
+const shopping = [
+    {
+        itemName : "py",
+        price : 1200
+    },
+    {
+        itemName : "js",
+        price : 12000
+    },
+    {
+        itemName : "cp",
+        price : 13424
+    },
+    {
+        itemName : "sct",
+        price : 452342
+    }
+] 
+const priceto = shopping.reduce((acc,item)=>acc+item.price , 0)
+console.log(priceto);
+*/
