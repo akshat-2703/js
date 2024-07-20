@@ -45,4 +45,46 @@ while(i <= j){
     }
 }
 console.log("true");
+console.log('5'+2);
+console.log('5'-2);
+
+var x = 20 ;
+function foo(){
+    console.log(x);
+ var  x = 10 ;
+}
+foo();
+
+const arr = [1,2,3,4] ;
+const arr2 = arr ;
+arr2[1] = 5 ;
+console.log(arr);
+console.log(arr2);
+
+console.log(typeof(NaN));
+
+console.log(NaN === NaN);
+
+console.log(1<2<3);
+console.log(3>2>1);
+
+//const arr = ["neha","nidhi","lalit","kamal"]
+const x = document.getElementsById('hello') ;
+console.log(x);
+x.onclick = ()=>{
+    x.innerHtML = "hi"
+}
+    
+const helloWorld = document.getElementById('hello-world');
+const myArray = ['elem1', 'elem2', 'elem3', 'elem4'];
+
+let clickCount = 0;
+
+helloWorld.addEventListener('click', () => {
+  clickCount++;
+  if (clickCount > myArray.length) {
+    clickCount = 1;
+  }
+  helloWorld.textContent = myArray[clickCount - 1];
+})
 */

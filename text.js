@@ -305,4 +305,5 @@ const shopping = [
 ] 
 const priceto = shopping.reduce((acc,item)=>acc+item.price , 0)
 console.log(priceto);
+
 */
