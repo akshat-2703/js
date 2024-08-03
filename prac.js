@@ -87,7 +87,7 @@ helloWorld.addEventListener('click', () => {
   }
   helloWorld.textContent = myArray[clickCount - 1];
 })
-*/
+
 //callback function example == 
 //callback basically wo jese jo function ek bna rkha h us function ko hm kisi dusre function m as argument pass kre i.e. callback function
 function sum(a,b){
@@ -97,3 +97,16 @@ function cse(a,b,sumi){
     sum(a,b) ;
 }
 cse(4,2,sum) ;
+*/
+//using callback hell or as series of callback 
+function getData(data,getNextData) {
+     setTimeout(()=>{
+         console.log(data); 
+         getNextData() ;
+     },2000)
+}
+getData(1,()=>{
+    getData(3,()=>{
+        getData(4) ;
+    });
+}) ;
