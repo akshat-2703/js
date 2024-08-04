@@ -97,12 +97,14 @@ function cse(a,b,sumi){
     sum(a,b) ;
 }
 cse(4,2,sum) ;
-*/
+
 //using callback hell or as series of callback 
 function getData(data,getNextData) {
      setTimeout(()=>{
          console.log(data); 
-         getNextData() ;
+         if(getNextData){
+            getNextData() ;
+         }
      },2000)
 }
 getData(1,()=>{
@@ -110,3 +112,44 @@ getData(1,()=>{
         getData(4) ;
     });
 }) ;
+
+//To resolve the issue of callback hell we use promises
+//promise is for eventual completion of task it is an object in js
+
+let promise = new Promise((resolve,reject) => {
+    console.log("I am a promise") ;
+       resolve("success") ;
+})
+       
+function getData(dataId,getNextData){
+        return new Promise((resolve,reject) =>{
+            setTimeout((resolve,reject) =>{
+            console.log("data",dataId) ; 
+            resolve("success");
+            if(getNextData){
+                getNextData() ;
+            }
+            },2000) ;
+        })
+      }
+ 
+//for promise to fullfil we use then function and for reject we use catch function
+
+const getPromise = () => {
+    return new Promise((resolve,reject) => {
+        console.log("I am a promise"); 
+      //  resolve("success") ;
+      reject("error") ;
+    })
+};
+
+let promise = getPromise();
+ promise.then((res)=>{
+    console.log("promise fullfilled",res) ;
+ });
+
+ promise.catch((err) =>{
+    console.log("rejected",err);
+    
+ })
+    */
