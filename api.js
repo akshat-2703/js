@@ -21,7 +21,7 @@ console.log(promise);
 //network m koi request bj rhe and that getting response from their side that is ajax 
 //API process work 1.FIrst we request to api and that response come in json format and now that 2. json format we convert into javascript object form  i.e.usable format wo convert krne k liee we use json method i.e asynchronous promise return krta h fetch first promise and second promise as json method 
 //JSON() method returns a second promise that resolves with the result of parsing the response body text as json (input is json and output is js object) json method se hm actual data hm nikalte h object response k through
-*/
+
 //as in response  we have come in which fetch api there in then response in json format that we hae to js object
 //json as returns 
 
@@ -34,3 +34,19 @@ const factPara = document.querySelector('#fact') ;
     let data = await response.json() ;
     factPara.innerText =  data[0].text ;
 })() ;
+ */
+
+
+const URL = "https://cat-fact.herokuapp.com/facts" ; 
+const factPara = document.querySelector('#fact') ;
+const btn = document.querySelector('#btn')
+
+const getFact =  async () => {
+    console.log("getting data....") ;
+    let response = await fetch(URL) ;
+    console.log(response.status) ;
+    let data = await response.json() ;
+    factPara.innerText =  data[0].text ;
+};
+
+btn.addEventListener("click",getFact) ;
