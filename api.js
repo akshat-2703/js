@@ -34,7 +34,7 @@ const factPara = document.querySelector('#fact') ;
     let data = await response.json() ;
     factPara.innerText =  data[0].text ;
 })() ;
- */
+ 
 
 
 const URL = "https://cat-fact.herokuapp.com/facts" ; 
@@ -46,7 +46,37 @@ const getFact =  async () => {
     let response = await fetch(URL) ;
     console.log(response.status) ;
     let data = await response.json() ;
-    factPara.innerText =  data[0].text ;
+    factPara.innerText =  data[1].text ;
 };
 
 btn.addEventListener("click",getFact) ;
+
+const URL = "https://cat-fact.herokuapp.com/facts" ; 
+const factPara = document.querySelector('#fact') ;
+const btn = document.querySelector('#btn')
+
+
+function getFact() {
+    fetch(URL)
+    .then((response) => {
+        return response.json() ;
+    })
+    .then((data) => {
+        console.log(data);
+        factPara.innerText =  data[2].text ;
+    })
+}
+btn.addEventListener("click",getFact) ;
+//requests and response we have some http verbs or some rules http verbs btati h hm kis type ki request bj rhe
+1.Get = to retrieve data 
+2.Post = to send data
+3.delete = to delete 
+4. patch = to update 
+ 
+//RESPONSE STATUS CODE == 
+200 = SUCCESSFUL Response
+400 = client error jo api exist ni krti
+404 = page bit found 
+500 = server error response 
+HTTP RESPONSE HEADERS also contain details about the responses,such as content type , http status code,etc.
+*/
