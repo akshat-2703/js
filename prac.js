@@ -261,3 +261,4 @@ function getData(dataId){
    await getData(3) ;
    console.log("getting data1...");
 })()  ;
+//iife function ko dobara use ni kr payge
